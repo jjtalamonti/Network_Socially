@@ -1,0 +1,27 @@
+{
+  "name": "network_socially",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ollyhite/social_network_api_tool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ollyhite/social_network_api_tool/issues"
+  },
+  "homepage": "https://github.com/ollyhite/social_network_api_tool#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.29.3",
+    "mongoose": "^6.4.1",
+    "nodemon": "^2.0.18"
+  }
+}

@@ -1,0 +1,22 @@
+const { Thought, Reaction } = require("../models");
+const User = require("../models/User.js");
+
+module.exports = {
+    getThought(req, res) {
+        Thought.find()
+            .then((thoughts) => res, json(thoughts))
+            .catch((err) => res, status(500).json(err));
+
+    },
+    postThought(req, res) {
+        Thought.create(req.body)
+            .then((thought) => {
+                console.log(thought);
+                return User.findOneAndUpdate(
+                    { username: req.body.username },
+                    { $addToSet: { thoughts: thought } },
+                    { new: true }
+                );
+            })
+    }
+}
